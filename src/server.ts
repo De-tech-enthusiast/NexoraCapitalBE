@@ -23,6 +23,12 @@ import adminRoutes from './routes/admin';
 import { calculateDailyReturns } from './services/investmentService';
 
 const app = express();
+app.get("/", (_req, res) => {
+  res.json({
+    status: "OK",
+    message: "Nexora Capital API is running",
+  });
+});
 const PORT = process.env.PORT || 5000;
 
 // Security middleware

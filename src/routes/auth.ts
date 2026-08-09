@@ -234,22 +234,23 @@ router.post(
       );
 
       res.json({
-        success: true,
-        message: 'Login successful',
-        data: {
-          user: {
-            id: user.id,
-            email: user.email,
-            username: user.username,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            country: user.country,
-            preferredCurrency: user.preferredCurrency,
-            verificationStatus: user.verificationStatus,
-          },
-          token,
-        },
-      });
+  success: true,
+  message: 'Login successful',
+  data: {
+    user: {
+      id: user.id,
+      email: user.email,
+      username: user.username,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      country: user.country,
+      preferredCurrency: user.preferredCurrency,
+      role: user.role,
+      verificationStatus: user.verificationStatus,
+    },
+    token,
+  },
+});
     } catch (error) {
       console.error('Login error:', error);
       res.status(500).json({

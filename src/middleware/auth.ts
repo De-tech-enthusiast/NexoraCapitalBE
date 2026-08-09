@@ -38,6 +38,11 @@ export const authenticate = async (req: AuthRequest, res: Response, next: NextFu
         message: 'User not found.',
       });
     }
+    console.log("AUTH USER:", {
+  id: user.id,
+  email: user.email,
+  role: user.role,
+});
 
     req.user = {
       id: user.id,

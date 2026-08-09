@@ -119,7 +119,7 @@ router.post(
       res.status(201).json({
         success: true,
         message: 'Registration successful',
-        data: {
+               data: {
           user: {
             id: newUser.id,
             email: newUser.email,
@@ -127,6 +127,8 @@ router.post(
             firstName: newUser.firstName,
             lastName: newUser.lastName,
             country: newUser.country,
+            preferredCurrency: newUser.preferredCurrency,
+            role: newUser.role,
             verificationStatus: newUser.verificationStatus,
           },
           token,
